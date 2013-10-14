@@ -39,10 +39,10 @@ public class MyHttpGet1 extends AsyncTask<TextView, Void, String> {
 				date = getDate.get(cnt).ownText();
 				cnt++;
 				if (result == null) {
-					result = "Result from BackPage:" + "\n" ;
+					result = "-----Results from BackPage-----" + "\n" ;
 				}
 				
-				result += "\n" + date + " " + title;
+				result += "\n" + date + " " + title + "\n";
 			}
 
 		} catch (Exception e) {
@@ -54,7 +54,7 @@ public class MyHttpGet1 extends AsyncTask<TextView, Void, String> {
 
 	public void setUrl(String query) {
 		if (query.contains(" ")) {
-			query = query.replace(" ", "+");
+			query = query.replace(" ", "%20");
 		}
 		 url = "http://washingtondc.backpage.com/buyselltrade/?keyword=" + query;
 	}

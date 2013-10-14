@@ -42,7 +42,7 @@ public class MyHttpGet extends AsyncTask<TextView, Void, String> {
 				  cnt++;
 				  if(result == null)
 				  {
-						result = "Result from Craiglist:" + "\n"; 
+						result = "\n" + "-----Results from Craiglist-----" + "\n"; 
 				  }
 				  result += "\n" + date + " " + title + " " + price;
 			 }
